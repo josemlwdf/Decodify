@@ -110,7 +110,7 @@ def decode(string):
 
         ipv6_base85 = re.search(r'^[0-9A-Za-z!#$%&()*+\-;<=>?@^_`{|}~]+$', string)  # Match any Base85-encoded string
         if ipv6_base85:
-            decode_base85_ipv6(string.swapcase())  # Call the IPv6 decoding function
+            decode_base85_ipv6(string)  # Call the IPv6 decoding function
 
         zmq_base85 = re.search(r'^[0-9a-zA-Z.\-:+=^!/*?&<>()\[\]{}@%$#]+$', string)  # Match any Base85-encoded string
         if zmq_base85:
@@ -166,6 +166,7 @@ def decode_base85_ipv6(string):
         # Optionally decode further
         decode(decoded_string)
     except:
+        decode(string.swapcase())
         return
 
 
