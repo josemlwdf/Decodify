@@ -145,7 +145,7 @@ def rot_decode(string, max_rot=1000):
     return decoded_string
 
 
-def decode_base85_ipv6(string):
+def decode_base85_ipv6(string, swap=False):
     """Decode a Base85-encoded IPv6 address."""
     try:
         # Decode the Base85 string
@@ -154,6 +154,7 @@ def decode_base85_ipv6(string):
         try:
             decoded_string = decoded_bytes.decode()
         except:
+            print(decoded_string) 
             return
 
         # Check if the decoded IPv6 address is already in the decoded list
@@ -166,7 +167,7 @@ def decode_base85_ipv6(string):
         # Optionally decode further
         decode(decoded_string)
     except:
-        decode(string.swapcase())
+        if not swap: decode_base85_ipv6(string.swapcase(), True)
         return
 
 
