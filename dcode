@@ -57,7 +57,7 @@ def banner():
             |   )|___)|    |   )|   )| |___ \   )
             |__/ |__  |__  |__/ |__/ | |     \_/ 
                                               /  
-            https://github.com/s0md3v/Decodify\033[1;m\n'''
+            https://github.com/s0md3v/Decodify\033[1;m'''
         )
         print(msg)
 
