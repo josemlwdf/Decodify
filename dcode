@@ -49,16 +49,14 @@ def check_ascii(s):
 
 def banner():
     if not args.quiet:
-        msg = (
-            f'''
+        msg = (f'''
               __                         __      
             |/  |                   | / /        
             |   | ___  ___  ___  ___|  (         
             |   )|___)|    |   )|   )| |___ \   )
             |__/ |__  |__  |__/ |__/ | |     \_/ 
                                               /  
-            https://github.com/s0md3v/Decodify'''
-        )
+            https://github.com/s0md3v/Decodify''')
         print(msg)
 
 
